@@ -1,9 +1,7 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+
 const TaskItems = ({ id }) => {
-  const todos = useSelector((state) => state.tasks);
   return (
-     
     <div
       style={{
         border: "1px solid black",

@@ -1,8 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+
 export const Navbar = () => {
-  const todos = useSelector((state) => state.tasks);
   return (
     <div
       style={{
@@ -22,15 +20,11 @@ export const Navbar = () => {
       </div>
       <div style={{ flex: "1" }}>
         <div>Total Tasks</div>
-        <div data-testid="total-tasks-count">{todos.length}</div>
+        <div data-testid="total-tasks-count"></div>
       </div>
-      <Link to={"/add"}>
       <div style={{ display: "flex" }}>
-        
         <button data-testid="add-task">Add Task</button>
-        
       </div>
-      </Link>
     </div>
   );
 };
